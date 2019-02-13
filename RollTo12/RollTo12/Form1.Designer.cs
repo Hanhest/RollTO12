@@ -32,9 +32,9 @@
 			this.tbxDice = new System.Windows.Forms.TextBox();
 			this.btnRollDice = new System.Windows.Forms.Button();
 			this.tbxSum = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.lblGeometric = new System.Windows.Forms.Label();
-			this.btnAll = new System.Windows.Forms.Button();
+			this.lblTarget = new System.Windows.Forms.Label();
+			this.lblSum = new System.Windows.Forms.Label();
+			this.btnSum = new System.Windows.Forms.Button();
 			this.lblAll = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
@@ -46,7 +46,6 @@
 			this.lblDiceRoll.Size = new System.Drawing.Size(153, 34);
 			this.lblDiceRoll.TabIndex = 0;
 			this.lblDiceRoll.Text = "Write a number over 4 \r\nand below 24:";
-			this.lblDiceRoll.Click += new System.EventHandler(this.lblDiceRoll_Click);
 			// 
 			// tbxDice
 			// 
@@ -76,34 +75,34 @@
 			this.tbxSum.Size = new System.Drawing.Size(88, 22);
 			this.tbxSum.TabIndex = 5;
 			// 
-			// label1
+			// lblTarget
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(346, 362);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(311, 17);
-			this.label1.TabIndex = 8;
-			this.label1.Text = "Rolls four dices until you get your target number";
+			this.lblTarget.AutoSize = true;
+			this.lblTarget.Location = new System.Drawing.Point(346, 362);
+			this.lblTarget.Name = "lblTarget";
+			this.lblTarget.Size = new System.Drawing.Size(304, 17);
+			this.lblTarget.TabIndex = 8;
+			this.lblTarget.Text = "Roll four dices until you get your target number";
 			// 
-			// lblGeometric
+			// lblSum
 			// 
-			this.lblGeometric.AutoSize = true;
-			this.lblGeometric.Location = new System.Drawing.Point(48, 103);
-			this.lblGeometric.Name = "lblGeometric";
-			this.lblGeometric.Size = new System.Drawing.Size(240, 17);
-			this.lblGeometric.TabIndex = 7;
-			this.lblGeometric.Text = "Sum up all dice rolls on the latest try:";
+			this.lblSum.AutoSize = true;
+			this.lblSum.Location = new System.Drawing.Point(57, 103);
+			this.lblSum.Name = "lblSum";
+			this.lblSum.Size = new System.Drawing.Size(207, 17);
+			this.lblSum.TabIndex = 7;
+			this.lblSum.Text = "Sum up _ sums on the latest try";
 			// 
-			// btnAll
+			// btnSum
 			// 
-			this.btnAll.Enabled = false;
-			this.btnAll.Location = new System.Drawing.Point(117, 140);
-			this.btnAll.Name = "btnAll";
-			this.btnAll.Size = new System.Drawing.Size(88, 45);
-			this.btnAll.TabIndex = 6;
-			this.btnAll.Text = "All";
-			this.btnAll.UseVisualStyleBackColor = true;
-			this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
+			this.btnSum.Enabled = false;
+			this.btnSum.Location = new System.Drawing.Point(117, 140);
+			this.btnSum.Name = "btnSum";
+			this.btnSum.Size = new System.Drawing.Size(88, 45);
+			this.btnSum.TabIndex = 6;
+			this.btnSum.Text = "Sum";
+			this.btnSum.UseVisualStyleBackColor = true;
+			this.btnSum.Click += new System.EventHandler(this.btnSum_Click);
 			// 
 			// lblAll
 			// 
@@ -119,15 +118,15 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 494);
 			this.Controls.Add(this.lblAll);
-			this.Controls.Add(this.btnAll);
-			this.Controls.Add(this.label1);
-			this.Controls.Add(this.lblGeometric);
+			this.Controls.Add(this.btnSum);
+			this.Controls.Add(this.lblTarget);
+			this.Controls.Add(this.lblSum);
 			this.Controls.Add(this.tbxSum);
 			this.Controls.Add(this.btnRollDice);
 			this.Controls.Add(this.tbxDice);
 			this.Controls.Add(this.lblDiceRoll);
 			this.Name = "Form1";
-			this.Text = "Form1";
+			this.Text = "7";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -139,9 +138,9 @@
         private System.Windows.Forms.TextBox tbxDice;
         private System.Windows.Forms.Button btnRollDice;
         private System.Windows.Forms.TextBox tbxSum;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblGeometric;
-        private System.Windows.Forms.Button btnAll;
+        private System.Windows.Forms.Label lblTarget;
+        private System.Windows.Forms.Label lblSum;
+        private System.Windows.Forms.Button btnSum;
 		private System.Windows.Forms.Label lblAll;
 	}
 }

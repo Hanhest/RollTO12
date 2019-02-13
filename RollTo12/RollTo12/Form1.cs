@@ -17,7 +17,7 @@ namespace RollTo12
         int num3 = 0;
         int num4 = 0;
         Random rnd = new Random();
-        int[] all;
+		int[] insertSum;
 
         public Form1()
         {
@@ -32,25 +32,32 @@ namespace RollTo12
             int sum = 0;
             int insert = int.Parse(tbxSum.Text);
 			int tries = 1;
+			//Sätt in insert talet i lblSum
+			lblSum.Text = "Sum up" + insert + "sums on the latest try";
+			//Skapa en array där man sätter in det inmatade talets antal summor
+			//räknat från starten av försöket.
+			
 
-            if (insert > 3 && insert < 25)
+
+
+			if (insert > 3 && insert < 25)
             {
 				while (sum != insert)
 				{
 
-					all = new int[tries];
 					for (int i = 0 ; sum != insert ; i++)
 					{
-						int num1 = rnd.Next(1, 7);
+						num1 = rnd.Next(1, 7);
 						tbxDice.AppendText("Dice Roll Num.1 = " + num1.ToString() + " \n");
-						int num2 = rnd.Next(1, 7);
+						num2 = rnd.Next(1, 7);
 						tbxDice.AppendText("Dice Roll Num.2 = " + num2.ToString() + " \n");
-						int num3 = rnd.Next(1, 7);
+						num3 = rnd.Next(1, 7);
 						tbxDice.AppendText("Dice Roll Num.3 = " + num3.ToString() + " \n");
-						int num4 = rnd.Next(1, 7);
+						num4 = rnd.Next(1, 7);
 						tbxDice.AppendText("Dice Roll Num.4 = " + num4.ToString() + " \n");
 						sum = num1 + num2 + num3 + num4;
 						tbxDice.AppendText("Summan =" + sum + " \n" + " \n");
+						insertSum = new int[i];
 						tries++;
 					}
 				}
@@ -61,27 +68,20 @@ namespace RollTo12
             {
                 tbxDice.AppendText("Thats Tha Wrong Numba \n");
             }
+
             btnRollDice.Enabled = false;
             tbxSum.Enabled = false;
-            btnAll.Enabled = true;
+            btnSum.Enabled = true;
         }
 
-        private void btnFigure_Click(object sender, EventArgs e)
+        public void btnSum_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void lblDiceRoll_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void btnAll_Click(object sender, EventArgs e)
-        {
-
-			lblAll.Text = "" + all[0]; 
+			//Summera det inmatade talets antal summor från start
+			double entireSum = 0;
+			for (int j = 0; j < insertSum.Length; j++) entireSum = entireSum + insertSum[j];
             btnRollDice.Enabled = true;
             tbxSum.Enabled = true;
+			btnSum.Enabled = false;
         }
     }
 }

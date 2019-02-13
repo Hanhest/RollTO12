@@ -18,3 +18,13 @@ C:\Users\hannes.gyllhamn\Desktop\RollTo12\RollTo12\RollTo12\obj\Debug\RollTo12.c
 C:\Users\hannes.gyllhamn\Desktop\RollTo12\RollTo12\RollTo12\obj\Debug\RollTo12.csproj.CoreCompileInputs.cache
 C:\Users\hannes.gyllhamn\Desktop\RollTo12\RollTo12\RollTo12\obj\Debug\RollTo12.exe
 C:\Users\hannes.gyllhamn\Desktop\RollTo12\RollTo12\RollTo12\obj\Debug\RollTo12.pdb
+C:\Users\hannes.gyllhamn\Documents\GitHub\RollTO12\RollTo12\RollTo12\bin\Debug\RollTo12.exe.config
+C:\Users\hannes.gyllhamn\Documents\GitHub\RollTO12\RollTo12\RollTo12\bin\Debug\RollTo12.exe
+C:\Users\hannes.gyllhamn\Documents\GitHub\RollTO12\RollTo12\RollTo12\bin\Debug\RollTo12.pdb
+C:\Users\hannes.gyllhamn\Documents\GitHub\RollTO12\RollTo12\RollTo12\obj\Debug\RollTo12.csprojAssemblyReference.cache
+C:\Users\hannes.gyllhamn\Documents\GitHub\RollTO12\RollTo12\RollTo12\obj\Debug\RollTo12.Form1.resources
+C:\Users\hannes.gyllhamn\Documents\GitHub\RollTO12\RollTo12\RollTo12\obj\Debug\RollTo12.Properties.Resources.resources
+C:\Users\hannes.gyllhamn\Documents\GitHub\RollTO12\RollTo12\RollTo12\obj\Debug\RollTo12.csproj.GenerateResource.cache
+C:\Users\hannes.gyllhamn\Documents\GitHub\RollTO12\RollTo12\RollTo12\obj\Debug\RollTo12.csproj.CoreCompileInputs.cache
+C:\Users\hannes.gyllhamn\Documents\GitHub\RollTO12\RollTo12\RollTo12\obj\Debug\RollTo12.exe
+C:\Users\hannes.gyllhamn\Documents\GitHub\RollTO12\RollTo12\RollTo12\obj\Debug\RollTo12.pdb
