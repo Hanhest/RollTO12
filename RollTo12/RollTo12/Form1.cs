@@ -19,10 +19,10 @@ namespace RollTo12
         Random rnd = new Random();
 		int[] insertSum;
 
-        public Form1()
+
+		public Form1()
         {
             InitializeComponent();
-            
         }
 
         public void btnRollDice_Click(object sender, EventArgs e)
@@ -32,13 +32,8 @@ namespace RollTo12
             int sum = 0;
             int insert = int.Parse(tbxSum.Text);
 			int tries = 1;
-			//Sätt in insert talet i lblSum
-			lblSum.Text = "Sum up" + insert + "sums on the latest try";
-			//Skapa en array där man sätter in det inmatade talets antal summor
-			//räknat från starten av försöket.
-			
-
-
+			lblSum.Text = "Sum up " + insert + " sums on the latest try";
+			insertSum = new int[insert];
 
 			if (insert > 3 && insert < 25)
             {
@@ -57,7 +52,7 @@ namespace RollTo12
 						tbxDice.AppendText("Dice Roll Num.4 = " + num4.ToString() + " \n");
 						sum = num1 + num2 + num3 + num4;
 						tbxDice.AppendText("Summan =" + sum + " \n" + " \n");
-						insertSum = new int[i];
+						insertSum[i] = sum;
 						tries++;
 					}
 				}
@@ -82,6 +77,7 @@ namespace RollTo12
             btnRollDice.Enabled = true;
             tbxSum.Enabled = true;
 			btnSum.Enabled = false;
+			lblAll.Text = "" + entireSum;
         }
     }
 }
