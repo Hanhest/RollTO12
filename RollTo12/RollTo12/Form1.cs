@@ -31,16 +31,16 @@ namespace RollTo12
             tbxDice.Clear();
             int sum = 0;
             int insert = int.Parse(tbxSum.Text);
-			int tries = 1;
-			lblSum.Text = "Sum up " + insert + " sums on the latest try";
+			int tries = 0;
+			lblSum.Text = "Sum up " + insert + "  sums on the latest try";
 			insertSum = new int[insert];
 
 			if (insert > 3 && insert < 25)
             {
-				while (sum != insert)
+				for (int i = 0 ; sum != insert ; i++)
 				{
 
-					for (int i = 0 ; sum != insert ; i++)
+					if (i < insertSum.Length)
 					{
 						num1 = rnd.Next(1, 7);
 						tbxDice.AppendText("Dice Roll Num.1 = " + num1.ToString() + " \n");
@@ -53,6 +53,20 @@ namespace RollTo12
 						sum = num1 + num2 + num3 + num4;
 						tbxDice.AppendText("Summan =" + sum + " \n" + " \n");
 						insertSum[i] = sum;
+						tries++;
+					}
+					else
+					{
+						num1 = rnd.Next(1, 7);
+						tbxDice.AppendText("Dice Roll Num.1 = " + num1.ToString() + " \n");
+						num2 = rnd.Next(1, 7);
+						tbxDice.AppendText("Dice Roll Num.2 = " + num2.ToString() + " \n");
+						num3 = rnd.Next(1, 7);
+						tbxDice.AppendText("Dice Roll Num.3 = " + num3.ToString() + " \n");
+						num4 = rnd.Next(1, 7);
+						tbxDice.AppendText("Dice Roll Num.4 = " + num4.ToString() + " \n");
+						sum = num1 + num2 + num3 + num4;
+						tbxDice.AppendText("Summan =" + sum + " \n" + " \n");
 						tries++;
 					}
 				}
