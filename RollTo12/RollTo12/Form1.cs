@@ -12,19 +12,23 @@ namespace RollTo12
 {
     public partial class Form1 : Form
     {
+		//Deklarerar 4 st tärningar
         int num1 = 0;
         int num2 = 0;
         int num3 = 0;
         int num4 = 0;
+		//Deklarerar en random
         Random rnd = new Random();
+		//Deklarerar en array
 		int[] insertSum;
 
-
+		//Denna kommer när man skapar Form1
 		public Form1()
         {
             InitializeComponent();
         }
 
+		//Click event till btnRollDice
         public void btnRollDice_Click(object sender, EventArgs e)
         {
 
