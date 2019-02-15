@@ -19,7 +19,8 @@ namespace RollTo12
         int num4 = 0;
 		//Deklarerar en random
         Random rnd = new Random();
-		//Deklarerar en array
+		//Deklarerar en array för att samla de inmatade talets antal summor
+		//från det att loopen börjat.
 		int[] insertSum;
 
 		//Denna kommer när man skapar Form1
@@ -31,19 +32,27 @@ namespace RollTo12
 		//Click event till btnRollDice
         public void btnRollDice_Click(object sender, EventArgs e)
         {
-
+			//Tar bort allt som finns i tbxDice när man klickar på knappen.
             tbxDice.Clear();
+			//Deklarerar där summan av kasten med de fyra tärningarna sparas.
             int sum = 0;
+			//Hämtar det användaren skrivit i tbxSum.
             int insert = int.Parse(tbxSum.Text);
+			//Deklarerar där antalet försök ska sparas.
 			int tries = 0;
+			//Printa ut en text i lblSum för att veta antalet summor som ska summeras.
 			lblSum.Text = "Sum up " + insert + "  sums on the latest try";
+			//Lägger in det användaren skrivit i arrayen.
 			insertSum = new int[insert];
 
+			//Skapar en if sats för att loopen inte ska hålla på i all evighet.
 			if (insert > 3 && insert < 25)
             {
+				//En for loop där räknaren används i sync med den ny deklarerade
+				//Int:en (i) för att lägga in summor i rätt antal element.
 				for (int i = 0 ; sum != insert ; i++)
 				{
-
+					//Det utvecklas vidare genom att inte gå längre än att arrayen blir full
 					if (i < insertSum.Length)
 					{
 						num1 = rnd.Next(1, 7);
@@ -59,6 +68,8 @@ namespace RollTo12
 						insertSum[i] = sum;
 						tries++;
 					}
+					//När arrayen är full utförs else satsen som innehåller i princip
+					//samma sak exlsive arrayen
 					else
 					{
 						num1 = rnd.Next(1, 7);
