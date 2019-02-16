@@ -52,24 +52,34 @@ namespace RollTo12
 				//Int:en (i) för att lägga in summor i rätt antal element.
 				for (int i = 0 ; sum != insert ; i++)
 				{
-					//Det utvecklas vidare genom att inte gå längre än att arrayen blir full
+					//Det utvecklas vidare med en if sats som inte går längre än att arrayen blir full.
 					if (i < insertSum.Length)
 					{
+						//Det läggs in ett random nummer frånt 1 till 7 och till och med 6 vilket
+						//simulerar en tärning.
 						num1 = rnd.Next(1, 7);
+						//Det som är inom parentesen skrivs ut i tbx dice.
 						tbxDice.AppendText("Dice Roll Num.1 = " + num1.ToString() + " \n");
+						//Det händer samma sak som med num1 fast i num2.
 						num2 = rnd.Next(1, 7);
+						//Det händer samma sak som med num1 fast med num2.
 						tbxDice.AppendText("Dice Roll Num.2 = " + num2.ToString() + " \n");
+						//Det händer samma sak som med num1 fast i num3.
 						num3 = rnd.Next(1, 7);
+						//Det händer samma sak som med num1 fast med num3.
 						tbxDice.AppendText("Dice Roll Num.3 = " + num3.ToString() + " \n");
+						//Det händer samma sak som med num1 fast i num4.
 						num4 = rnd.Next(1, 7);
+						//Det händer samma sak som med num1 fast med num4.
 						tbxDice.AppendText("Dice Roll Num.4 = " + num4.ToString() + " \n");
+						//Här summeras alla tärningsslag.
 						sum = num1 + num2 + num3 + num4;
 						tbxDice.AppendText("Summan =" + sum + " \n" + " \n");
 						insertSum[i] = sum;
 						tries++;
 					}
 					//När arrayen är full utförs else satsen som innehåller i princip
-					//samma sak exlsive arrayen
+					//samma sak exlsive arrayen.
 					else
 					{
 						num1 = rnd.Next(1, 7);
