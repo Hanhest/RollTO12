@@ -45,11 +45,12 @@ namespace RollTo12
 			//Lägger in det användaren skrivit i arrayen.
 			insertSum = new int[insert];
 
-			//Skapar en if sats för att loopen inte ska hålla på i all evighet.
+			//Skapar en if sats för att loopen inte ska hålla på i all evighet. Det är omöjligt att 
+			//tärningarna får summorna under antalet tärningar och över 6 * (antal tärningar).
 			if (insert > 3 && insert < 25)
             {
-				//En for loop där räknaren används i sync med den ny deklarerade
-				//Int:en (i) för att lägga in summor i rätt antal element.
+				//En for loop där räknaren används i sync med den nydeklareradeInt:en (i) för att lägga
+				//in summor i rätt antal element. Det förklaras hur det funkar mer utförligt längre ner.
 				for (int i = 0 ; sum != insert ; i++)
 				{
 					//Det utvecklas vidare med en if sats som inte går längre än att arrayen blir full.
@@ -74,8 +75,12 @@ namespace RollTo12
 						tbxDice.AppendText("Dice Roll Num.4 = " + num4.ToString() + " \n");
 						//Här summeras alla tärningsslag.
 						sum = num1 + num2 + num3 + num4;
-						tbxDice.AppendText("Summan =" + sum + " \n" + " \n");
+						//Det som är inom parentesen skrivs ut i tbx dice.
+						tbxDice.AppendText("Summan =" + sum + " \n");
+						//Varje gång loopen går läggs den nya summan in i arrayen, med hälp av loopen
+						//så ökas variabeln (i) med 1 varje gång och därmed ökas även array indexen.
 						insertSum[i] = sum;
+						//Antal försök ökas med 1 varje gång.
 						tries++;
 					}
 					//När arrayen är full utförs else satsen som innehåller i princip
@@ -91,31 +96,44 @@ namespace RollTo12
 						num4 = rnd.Next(1, 7);
 						tbxDice.AppendText("Dice Roll Num.4 = " + num4.ToString() + " \n");
 						sum = num1 + num2 + num3 + num4;
-						tbxDice.AppendText("Summan =" + sum + " \n" + " \n");
+						tbxDice.AppendText("Sum =" + sum + " \n" + " \n");
 						tries++;
 					}
 				}
-				tbxDice.AppendText("Försök = " + tries + " \n" + " \n");
+				//När for loopens villkor uppfyllts tas antalet försök och skrivs ut i tbxDice.
+				tbxDice.AppendText("Tries = " + tries);
+				//btnRollDice görs oklickbar.
+				btnRollDice.Enabled = false;
+				//tbxSum görs oskrivbar.
+				tbxSum.Enabled = false;
+				//btnSum görs klickbar.
+				btnSum.Enabled = true;
 			}
 
             else
             {
+				//Om användaren skrivit en summa utanför intervallen skrivs det som finns innanför
+				//parentesen i tbxDice.
                 tbxDice.AppendText("Thats Tha Wrong Numba \n");
-            }
-
-            btnRollDice.Enabled = false;
-            tbxSum.Enabled = false;
-            btnSum.Enabled = true;
+			}
         }
 
+		//Clickevent till btnSum.
         public void btnSum_Click(object sender, EventArgs e)
         {
-			//Summera det inmatade talets antal summor från start
+			//Deklarerar där alla de inmatade talets antal summor från arrayen ska summeras upp.
 			double entireSum = 0;
+			//En for loop används för att ta ut innehållet av arrayen och summera det. Eftersom indexen
+			//till en array börjar från 0 så måste även (j) börja på 0 och klättra till numret precis
+			//under arrayens längd.
 			for (int j = 0; j < insertSum.Length; j++) entireSum = entireSum + insertSum[j];
-            btnRollDice.Enabled = true;
-            tbxSum.Enabled = true;
+			//När användaren tryckt på knappen går det åter igen att skriva i tbxSum.
+			tbxSum.Enabled = true;
+			//När användaren tryckt på knappen går det åter igen att trycka på btnRollDice.
+			btnRollDice.Enabled = true;
+			//När användaren tryckt på knappen går det inte längre att trycka på btnSum.
 			btnSum.Enabled = false;
+			//Sedan skrivs summan ut i lblAll.
 			lblAll.Text = "" + entireSum;
         }
     }
