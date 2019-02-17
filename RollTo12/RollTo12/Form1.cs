@@ -41,7 +41,7 @@ namespace RollTo12
 			//Deklarerar där antalet försök ska sparas.
 			int tries = 0;
 			//Printa ut en text i lblSum för att veta antalet summor som ska summeras.
-			lblSum.Text = "Sum up " + insert + "  sums on the latest try";
+			lblSum.Text = "Sum up " + insert + "  sums from the beginning on the latest try";
 			//Lägger in det användaren skrivit i arrayen.
 			insertSum = new int[insert];
 

@@ -49,7 +49,7 @@
 			// 
 			// tbxDice
 			// 
-			this.tbxDice.Location = new System.Drawing.Point(320, 27);
+			this.tbxDice.Location = new System.Drawing.Point(349, 27);
 			this.tbxDice.Multiline = true;
 			this.tbxDice.Name = "tbxDice";
 			this.tbxDice.ReadOnly = true;
@@ -59,7 +59,7 @@
 			// 
 			// btnRollDice
 			// 
-			this.btnRollDice.Location = new System.Drawing.Point(372, 397);
+			this.btnRollDice.Location = new System.Drawing.Point(416, 400);
 			this.btnRollDice.Name = "btnRollDice";
 			this.btnRollDice.Size = new System.Drawing.Size(241, 73);
 			this.btnRollDice.TabIndex = 4;
@@ -78,7 +78,7 @@
 			// lblTarget
 			// 
 			this.lblTarget.AutoSize = true;
-			this.lblTarget.Location = new System.Drawing.Point(346, 362);
+			this.lblTarget.Location = new System.Drawing.Point(369, 362);
 			this.lblTarget.Name = "lblTarget";
 			this.lblTarget.Size = new System.Drawing.Size(304, 17);
 			this.lblTarget.TabIndex = 8;
@@ -87,11 +87,11 @@
 			// lblSum
 			// 
 			this.lblSum.AutoSize = true;
-			this.lblSum.Location = new System.Drawing.Point(57, 103);
+			this.lblSum.Location = new System.Drawing.Point(12, 109);
 			this.lblSum.Name = "lblSum";
-			this.lblSum.Size = new System.Drawing.Size(207, 17);
+			this.lblSum.Size = new System.Drawing.Size(329, 17);
 			this.lblSum.TabIndex = 7;
-			this.lblSum.Text = "Sum up _ sums on the latest try";
+			this.lblSum.Text = "Sum up _ sums from the beginning on the latest try";
 			// 
 			// btnSum
 			// 
@@ -126,7 +126,7 @@
 			this.Controls.Add(this.tbxDice);
 			this.Controls.Add(this.lblDiceRoll);
 			this.Name = "Form1";
-			this.Text = "7";
+			this.Text = "RollTo12";
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
