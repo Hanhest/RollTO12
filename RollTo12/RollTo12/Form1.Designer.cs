@@ -41,11 +41,11 @@
 			// lblDiceRoll
 			// 
 			this.lblDiceRoll.AutoSize = true;
-			this.lblDiceRoll.Location = new System.Drawing.Point(89, 30);
+			this.lblDiceRoll.Location = new System.Drawing.Point(47, 47);
 			this.lblDiceRoll.Name = "lblDiceRoll";
-			this.lblDiceRoll.Size = new System.Drawing.Size(153, 34);
+			this.lblDiceRoll.Size = new System.Drawing.Size(241, 17);
 			this.lblDiceRoll.TabIndex = 0;
-			this.lblDiceRoll.Text = "Write a number over 4 \r\nand below 24:";
+			this.lblDiceRoll.Text = "Write a number over 4 and below 24:";
 			// 
 			// tbxDice
 			// 
